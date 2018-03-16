@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/table"
+    tools:context="com.example.root.scarnesdice.MainActivity">
+
+    <TextView
+        android:id="@+id/yourscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="28dp"
+        android:background="@android:color/darker_gray"
+        android:text="Your Score : "
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:id="@+id/computerscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/yourscore"
+        android:layout_marginEnd="98dp"
+        android:layout_marginRight="98dp"
+        android:background="@android:color/darker_gray"
+        android:text="Computer Score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ys_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/yourscore"
+        android:layout_alignBottom="@+id/yourscore"
+        android:layout_toEndOf="@+id/yourscore"
+        android:layout_toRightOf="@+id/yourscore"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/cs_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/computerscore"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/computerscore"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/roll"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/yourscore"
+        android:layout_alignStart="@+id/yourscore"
+        android:layout_below="@+id/diceview"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="38dp"
+        android:onClick="roll"
+        android:text="Roll" />
+
+    <Button
+        android:id="@+id/hold"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/roll"
+        android:layout_alignBottom="@+id/roll"
+        android:layout_centerHorizontal="true"
+        android:onClick="hold"
+        android:text="Hold" />
+
+    <Button
+        android:id="@+id/reset"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/hold"
+        android:layout_alignBottom="@+id/hold"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_toLeftOf="@+id/cs_tv"
+        android:layout_toStartOf="@+id/cs_tv"
+        android:onClick="reset"
+        android:text="Reset" />
+
+    <ImageView
+        android:id="@+id/diceview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/curr_score"
+        android:layout_marginTop="76dp"
+        android:layout_toLeftOf="@+id/reset"
+        android:layout_toStartOf="@+id/reset"
+        app:srcCompat="@drawable/dice1" />
+
+    <Button
+        android:id="@+id/exit"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="exit"
+        android:text="Exit" />
+
+    <TextView
+        android:id="@+id/curr_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/yourscore"
+        android:layout_marginTop="38dp"
+        android:layout_toLeftOf="@+id/diceview"
+        android:layout_toStartOf="@+id/diceview"
+        android:background="@android:color/darker_gray"
+        android:text="Your current score : "
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/curr_score_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/curr_score"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="23dp"
+        android:layout_toLeftOf="@+id/ys_tv"
+        android:layout_toStartOf="@+id/ys_tv"
+        android:background="@android:color/darker_gray"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/curr_comp_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/curr_score"
+        android:layout_alignBottom="@+id/curr_score"
+        android:layout_alignEnd="@+id/reset"
+        android:layout_alignRight="@+id/reset"
+        android:background="@android:color/darker_gray"
+        android:text="Computer current score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/comp_curr_score_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/curr_comp_score"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/hold"
+        android:layout_toRightOf="@+id/hold"
+        android:background="@android:color/darker_gray"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold" />
+
+</RelativeLayout>
